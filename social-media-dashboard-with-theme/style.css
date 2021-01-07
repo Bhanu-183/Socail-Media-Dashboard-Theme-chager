@@ -1,3 +1,5 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 .top
 {
   background-color:hsl(232, 19%, 15%);
@@ -283,6 +285,32 @@
     
   }
 
+  .fb-light:hover
+  {
+    background-image: url(./images/grey.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .tw-light:hover
+  {
+    background-image: url(./images/grey.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .insta-light:hover
+  {
+    background-image: url(./images/grey.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .yt-light:hover
+  {
+    background-image: url(./images/grey.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
   
   #tw
   {
@@ -482,3 +510,33 @@
     margin-left: 80px;
   }
 
+@media only screen and (max-width: 900px) {
+    .cards {
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .header {
+        /* padding: 35px 0 40px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center; */
+        flex-direction: column;
+
+    }
+
+  
+    .toggle{
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        gap: 25px;
+    }
+}
