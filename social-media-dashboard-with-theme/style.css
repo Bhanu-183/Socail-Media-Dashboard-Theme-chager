@@ -10,6 +10,7 @@
   top: 0px;
   background-size:contain;
   position: relative;
+  transition:background-color,color 2s;
 }
 
 .dark-mode-div1
@@ -22,6 +23,8 @@
   top: 0px;
   background-size:contain;
   position: relative;
+  transition:background-color,color 2s;
+  
 }
 
 .follow
@@ -285,31 +288,16 @@
     
   }
 
-  .fb-light:hover
-  {
-    background-image: url(./images/grey.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  .tw-light:hover
-  {
-    background-image: url(./images/grey.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  .insta-light:hover
-  {
-    background-image: url(./images/grey.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
+  .fb-light:hover,
+  .tw-light:hover,
+  .insta-light:hover,
   .yt-light:hover
   {
     background-image: url(./images/grey.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    transition: background-image 0.8s;
+    transform: scale(1.05);
   }
   
   #tw
@@ -351,53 +339,21 @@
     cursor: pointer;
   }
 
-  #fb:hover
+  #fb:hover,#tw:hover, #insta:hover,#yt:hover
   {
     background-color: hsl(228, 28%, 30%);
+    transform: scale(1.05);
   }
-  #fb-views:hover
+
+
+  #fb-views:hover,
+  #fb-likes:hover,
+  #tw-likes:hover,#tw-views:hover,
+  #yt-views:hover,#yt-likes:hover,
+  #insta-views:hover, #insta-likes:hover
   {
     background-color: hsl(228, 28%, 30%);
-  }
-  #fb-likes:hover
-  {
-    background-color: hsl(228, 28%, 30%);
-  }
-  #tw:hover
-  {
-    background-color: hsl(228, 28%, 30%);
-  }
-  #tw-likes:hover
-  {
-    background-color: hsl(228, 28%, 30%);
-  }
-  #tw-views:hover
-  {
-    background-color: hsl(228, 28%, 30%);
-  }
-  #insta:hover
-  {
-    background-color: hsl(228, 28%, 30%);
-  }
-  #insta-views:hover
-  {
-    background-color: hsl(228, 28%, 30%);
-  }
-  #insta-likes:hover
-  {
-    background-color: hsl(228, 28%, 30%);
-  }
-  #yt:hover
-  {
-    background-color: hsl(228, 28%, 30%);
-  }
-  #yt-views:hover
-  {
-    background-color: hsl(228, 28%, 30%);
-  }
-  #yt-likes:hover
-  {
-    background-color: hsl(228, 28%, 30%);
+    transform: scale(1.05);
   }
   
   .fb-text,.tw-text,.yt-text
@@ -510,33 +466,4 @@
     margin-left: 80px;
   }
 
-@media only screen and (max-width: 900px) {
-    .cards {
-        grid-template-rows: repeat(2, 1fr);
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
 
-@media only screen and (max-width: 500px) {
-    .header {
-        /* padding: 35px 0 40px 0;
-        display: flex;
-        justify-content: space-between;
-        align-items: center; */
-        flex-direction: column;
-
-    }
-
-  
-    .toggle{
-        width: 100%;
-        justify-content: space-between;
-    }
-
-    .cards {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(4, 1fr);
-        gap: 25px;
-    }
-}
